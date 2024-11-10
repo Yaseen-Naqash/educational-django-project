@@ -1,0 +1,95 @@
+/* variables */
+
+:root {
+    --primary-color: #ffead2;
+    --red-color: #e73656;
+    --blue-color: #00adb2;
+    --yellow-color: #ff9d00;
+    --text-color: #293340;
+  }
+
+  /* fonts */
+
+
+/* add your fonts here */
+
+  
+  /* basics */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  html{
+    direction: rtl; 
+  
+  }
+
+
+
+ /* messages */
+ .messages{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    z-index: 1000;
+
+}
+.alert {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    padding: 25px;
+    border-radius: 12px;
+  }
+  
+  .message-btn-close{
+    padding: 11px 15px;
+    border-radius: 100px;
+    border: none;
+    
+  }
+  /* Success message */
+  .alert-success {
+    color: #3c763d;
+    background-color: #b7ff9a;
+    
+  }
+  .alert-success .message-btn-close{
+    background-color: #3c763d;
+    color: white;
+  }
+  
+  /* Error message */
+  .alert-error {
+    background-color: rgb(255, 156, 156);
+    color: rgb(133, 0, 0);
+  }
+  .alert-error .message-btn-close{
+    background-color: rgb(133, 0, 0);
+    color: white;
+  }
+  
+  /* Info message */
+  .alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+  }
+  
+  /* Warning message */
+  .alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+  }

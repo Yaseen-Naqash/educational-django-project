@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %} my website {% endblock %}</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- <link rel="icon" type="image/x-icon" href="{% static 'files/images/favicon.png' %}"> -->
+
+
+    {% block extra_css %}
+
+
+    {% endblock %}
+
+</head>
+
+
+<body>
+
+    <nav>
+        <!-- header of your website -->
+    </nav>
+    
+
+
+
+    <main>
+        <!-- django messages -->
+    {% if messages %}
+    <div class="messages" id="messages">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" role="alert">
+            <h3 style="margin: 0 auto;">{{ message }}</h3>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+    {% block content %}
+    <!-- whis is where each page content placed -->
+    {% endblock %}
+
+
+    </main>
+
+
+
+
+    <footer>
+        <!-- footer of your web site -->
+    </footer>
+
+
+    {% block extra_js %}
+        <!-- Additional JS for individual pages can be added here -->
+
+    {% endblock %}
+    <!-- Global JS (like common scripts) -->
+    <script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>

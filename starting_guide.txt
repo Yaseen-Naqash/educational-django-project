@@ -1,0 +1,43 @@
+
+
+1 - django-admin startproject [nameofyourproject]
+
+2 - python manage.py startapp [nameofyourapp]
+
+3 - python manage.py makemigrations
+
+4 - python manage.py migrate
+
+5 - python manage.py createsuperuser
+- username
+- email
+- password
+- confirm password
+
+6 - python manage.py runserver
+
+
+______________________________________________________________________________
+______________________________________________________________________________
+
+*create urls.py for each app
+
+*include that app urls in your main urls.py
+
+*add your app to installed apps in settings
+
+*after changes to models fields, you should makemigrations and migrate.
+
+*for using imageField you should install pillow package and add it to installed apps in settings
+also you should make a dir url for uploaded images in your project in urls.py
+
+*for adding a global template folder import and introduce the template route in settings
+then create the folder and place your templates in it
+
+*for adding a static folder import and introduce the static route in settings
+then create the folder and place your statics in it
+
+* .gitignore file
+
+* if you want to see your models in admin panel of django you should register them in admin.py of that app like this :
+admin.site.register(modelname)
