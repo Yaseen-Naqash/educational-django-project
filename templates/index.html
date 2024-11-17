@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home - My Website
+{% endblock %}
+{% load static %}
+
+
+{% block extra_css %}
+    <style></style>
+{% endblock %}
+
+
+{% block content %}
+
+<form action="" method="GET">
+<div class="search-wrapper">
+
+        <input type="text" placeholder="جستوجو" name="q" value="{{ request.GET.q }}">
+
+        
+</div>
+</form>
+
+<div class="mobiles-wrapper">
+    <h1>لیست موبایل ها</h1>
+
+    <hr>
+
+
+    <div class="mobile-grid">
+
+        {% for mobile in mobiles %}
+        <div class="mobile">
+
+            <img src="{% static 'files/images/blue-no-image.jpg' %}" alt="">
+            
+            <h4>{{ mobile.title }}</h4>
+
+            <div class="info">
+                <p>{{mobile.manufacturer.title}}</p>
+                <p>{{mobile.get_status_display}}</p>
+            </div>
+
+            <p class="descirption">
+
+                {{mobile.description}}
+            </p>
+
+            <div class="price">
+                <h4>15,500,000</h4>
+                <h4>تومان</h4>
+            </div>
+
+        </div>
+        {% endfor %}
+        
+
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}
+
+
+{% block extra_js %}
+    <script></script>
+{% endblock %}
